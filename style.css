@@ -1,0 +1,986 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+button, input {
+  border: none;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/src/fonts/openSans/OpenSans-Regular.woff"), url("/src/fonts/openSans/OpenSans-Regular.woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/src/fonts/openSans/OpenSans-Bold.woff"), url("/src/fonts/openSans/OpenSans-Bold.woff2");
+  font-weight: bold;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/src/fonts/openSans/OpenSans-SemiBold.woff"), url("/src/fonts/openSans/OpenSans-SemiBold.woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormonant";
+  src: url("/src/fonts/cormonant/Cormorant-Bold.woff"), url("/src/fonts/cormonant/Cormorant-Bold.woff2");
+  font-weight: bold;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormonant";
+  src: url("/src/fonts/cormonant/Cormorant-BoldItalic.woff"), url("/src/fonts/cormonant/Cormorant-BoldItalic.woff2");
+  font-weight: bold;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cormonant";
+  src: url("/src/fonts/cormonant/Cormorant-Regular.woff"), url("/src/fonts/cormonant/Cormorant-Regular.woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+.linkArrow {
+  width: fit-content;
+  position: relative;
+}
+.linkArrow::after {
+  content: "";
+  right: -68px;
+  position: absolute;
+  width: 54px;
+  height: 17px;
+  background: url("/src/icons/arrows/forReadMoreColored.svg");
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.8; /* Начальное значение - скрыто */
+  }
+  to {
+    opacity: 1; /* Конечное значение - показать */
+  }
+}
+.button {
+  display: inline-block;
+  transition-duration: 0.3s;
+  transition-delay: 0.5s;
+}
+.button:hover {
+  background-color: #bae249;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+button, input {
+  border: none;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/src/fonts/openSans/OpenSans-Regular.woff"), url("/src/fonts/openSans/OpenSans-Regular.woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/src/fonts/openSans/OpenSans-Bold.woff"), url("/src/fonts/openSans/OpenSans-Bold.woff2");
+  font-weight: bold;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/src/fonts/openSans/OpenSans-SemiBold.woff"), url("/src/fonts/openSans/OpenSans-SemiBold.woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormonant";
+  src: url("/src/fonts/cormonant/Cormorant-Bold.woff"), url("/src/fonts/cormonant/Cormorant-Bold.woff2");
+  font-weight: bold;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormonant";
+  src: url("/src/fonts/cormonant/Cormorant-BoldItalic.woff"), url("/src/fonts/cormonant/Cormorant-BoldItalic.woff2");
+  font-weight: bold;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cormonant";
+  src: url("/src/fonts/cormonant/Cormorant-Regular.woff"), url("/src/fonts/cormonant/Cormorant-Regular.woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+.linkArrow {
+  width: fit-content;
+  position: relative;
+}
+.linkArrow::after {
+  content: "";
+  right: -68px;
+  position: absolute;
+  width: 54px;
+  height: 17px;
+  background: url("/src/icons/arrows/forReadMoreColored.svg");
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.8; /* Начальное значение - скрыто */
+  }
+  to {
+    opacity: 1; /* Конечное значение - показать */
+  }
+}
+.button {
+  display: inline-block;
+  transition-duration: 0.3s;
+  transition-delay: 0.5s;
+}
+.button:hover {
+  background-color: #bae249;
+}
+
+body {
+  font-family: "Open Sans";
+  background-color: #1d2f30;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1110px;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+}
+@media (width < 992px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+.header {
+  z-index: 30;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 0;
+}
+.header .container {
+  background-color: #1d2f30;
+  gap: 120px;
+  padding: 20px;
+  overflow-x: hidden;
+}
+.header .container .menu {
+  display: flex;
+  gap: 60px;
+}
+.header .container .menu a {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 26;
+  line-height: 150%;
+  color: #fff;
+}
+.header .container .aside-navigation {
+  gap: 60px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  justify-self: flex-end;
+}
+.header .container .aside-navigation .header__icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+.header .container .aside-navigation .header__icon:hover {
+  opacity: 0.7;
+}
+.header .container .aside-navigation .header__icon:focus {
+  outline-offset: 4px;
+  outline-color: #bae249;
+}
+.header .container .aside-navigation .header__burger {
+  cursor: pointer;
+  display: none;
+  background: url("/src/icons/other/bars-solid.svg") no-repeat;
+}
+@media (width < 768px) {
+  .header .container .aside-navigation .header__burger {
+    display: block;
+  }
+  .header .container .aside-navigation .search-icon {
+    display: none;
+  }
+}
+@media (width < 576px) {
+  .header .container .aside-navigation {
+    margin-left: 50px;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 1200px) {
+  .header .container {
+    gap: 0;
+  }
+  .header .container .menu {
+    display: none;
+  }
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex: 1 auto;
+  background-color: #1d2f30;
+  flex-direction: column;
+}
+
+.section {
+  width: 100%;
+}
+
+.hero-section {
+  position: relative;
+}
+.hero-section .hero-bg {
+  opacity: 0.3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/src/images/hero/flowers.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero-section .container {
+  padding-top: 235px;
+  padding-bottom: 115px;
+}
+.hero-section .container .hero__header {
+  position: relative;
+  max-width: 635px;
+}
+.hero-section .container .hero__header .title {
+  font-family: "Cormonant";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 100%;
+  color: #fff;
+  margin-bottom: 26px;
+}
+.hero-section .container .hero__header .subtitle {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 26;
+  line-height: 150%;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.hero-section .container .hero__header .link {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 26;
+  color: #bae249;
+}
+@media (width < 576px) {
+  .hero-section .container .hero__header .title {
+    font-size: 45px;
+    margin-bottom: 30px;
+  }
+  .hero-section .container .hero__header .subtitle {
+    display: none;
+  }
+}
+@media (width < 576px) {
+  .hero-section .container {
+    padding-top: 130px;
+    padding-bottom: 50px;
+  }
+}
+
+.cards-slider-section .container {
+  flex-grow: 0;
+}
+.cards-slider-section .container .slider {
+  height: fit-content;
+}
+
+.card {
+  max-width: 255px;
+  display: flex;
+}
+.card .card__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card .card__container .image-elem {
+  height: 180px;
+  width: 100%;
+  background: #0b1919;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.card .card__container .image-elem::after {
+  content: "";
+  display: block;
+  z-index: 22;
+  position: absolute;
+  width: 233px;
+  height: 120px;
+}
+.card .card__container .card__content {
+  border: 1px solid #0b1919;
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card .card__container .card__content .title {
+  font-family: "Cormonant";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  color: #fff;
+}
+.card .card__container .card__content .subtitle {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #899d9d;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+.card .card__container .card__content .card__btn {
+  border: 1px solid #bae249;
+  padding: 11px 27px;
+  width: fit-content;
+  max-width: 145px;
+  background: inherit;
+  transition: all 0.3s ease;
+}
+.card .card__container .card__content .card__btn span {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #bae249;
+}
+.card .card__container .card__content .card__btn:focus {
+  outline-color: #bae249;
+  outline-offset: 4px;
+}
+.card .card__container .card__content .card__btn:hover {
+  background: #bae249;
+}
+.card .card__container .card__content .card__btn:hover span {
+  color: #0b1919;
+}
+.card .card__container .card__content .card__btn:active {
+  background: #688b05;
+}
+.card .card__container .card__content .card__btn:disabled {
+  border: 1px solid #899d9d;
+}
+.card .card__container .card__content .card__btn:disabled span {
+  color: #899d9d;
+}
+.card:nth-child(1) .image-elem::after {
+  background-image: url("/src/images/slider/image1.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card:nth-child(2) .image-elem::after {
+  background-image: url("/src/images/slider/image2.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card:nth-child(3) .image-elem::after {
+  background-image: url("/src/images/slider/image3.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card:nth-child(4) .image-elem::after {
+  background-image: url("/src/images/slider/image4.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.swiper--custom {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+}
+.swiper--custom .swiper-slide--custom {
+  display: flex;
+  gap: 30px;
+}
+@media (width <= 1200px) {
+  .swiper--custom .swiper-slide--custom {
+    justify-content: center;
+    padding: 15px;
+  }
+  .swiper--custom .swiper-slide--custom .card:last-child {
+    display: none;
+  }
+}
+@media (width <= 992px) {
+  .swiper--custom .swiper-slide--custom .card:nth-child(2n) {
+    display: none;
+  }
+}
+@media (width <= 768px) {
+  .swiper--custom .swiper-slide--custom .card:not(:first-child) {
+    display: none;
+  }
+}
+.swiper--custom .swiper-navigation {
+  margin-top: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  position: relative;
+}
+.swiper--custom .swiper-navigation .swiper-pagination {
+  position: static;
+  width: fit-content;
+  display: block;
+}
+@media (width > 768px) {
+  .swiper--custom .swiper-navigation .fraction {
+    display: none;
+  }
+}
+.swiper--custom .swiper-navigation .bullets {
+  margin: 0 auto;
+}
+.swiper--custom .swiper-navigation .bullets .swiper-pagination-bullet {
+  background-color: #0b1919;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+}
+.swiper--custom .swiper-navigation .bullets .swiper-pagination-bullet-active {
+  background-color: #bae249;
+}
+@media (width < 768px) {
+  .swiper--custom .swiper-navigation .bullets {
+    display: block;
+  }
+}
+.swiper--custom .swiper-navigation .prev-button--custom {
+  left: 43%;
+}
+.swiper--custom .swiper-navigation .prev-button--custom::after {
+  background: url("/src/icons/arrows/forSliderPrev2.svg");
+}
+.swiper--custom .swiper-navigation .next-button--custom {
+  right: 43%;
+}
+.swiper--custom .swiper-navigation .next-button--custom::after {
+  background: url("/src/icons/arrows/forSliderNext2.svg");
+}
+.swiper--custom .swiper-navigation .prev-button--custom,
+.swiper--custom .swiper-navigation .next-button--custom {
+  top: 15px;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+}
+.swiper--custom .swiper-navigation .prev-button--custom::after,
+.swiper--custom .swiper-navigation .next-button--custom::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (width <= 768px) {
+  .swiper--custom .swiper-navigation .prev-button--custom,
+  .swiper--custom .swiper-navigation .next-button--custom {
+    display: none;
+  }
+}
+
+.blog-section .blog__container {
+  display: block;
+  padding-bottom: 60px;
+  overflow: auto;
+}
+.blog-section .blog__container .title {
+  font-family: "Cormonant";
+  font-style: italic;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  color: #fff;
+}
+.blog-section .blog__container .blog__content {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  overflow-x: hidden;
+}
+.blog-section .blog__container .blog__content .mobile-swiper2 {
+  max-height: 600px;
+}
+.blog-section .blog__container .blog__content .mobile-swiper2 .swiper-wrapper {
+  width: auto;
+  max-width: none;
+}
+.blog-section .blog__container .blog__content .mobile-swiper2 .swiper-wrapper .blog-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.blog-section .blog__container .blog__content .mobile-swiper2 .swiper-wrapper .blog-slide .slide__title {
+  display: none;
+  position: absolute;
+  width: 100%;
+  padding: 16px;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+}
+.blog-section .blog__container .blog__content .mobile-swiper2 .swiper-wrapper .blog-slide .slide__title .swipe-text {
+  display: inline-block;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #899d9d;
+  position: relative;
+}
+.blog-section .blog__container .blog__content .mobile-swiper2 .swiper-wrapper .blog-slide .slide__title .swipe-text::after {
+  content: "";
+  position: absolute;
+  display: block;
+  right: -85px;
+  bottom: 5px;
+  width: 80px;
+  height: 10px;
+  background: url("/src/icons/arrows/forMobileSwiper.svg") no-repeat;
+  background-position: center;
+}
+.blog-section .blog__container .blog__content .mobile-swiper2 .swiper-wrapper .blog-slide .blog-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Сохраняет пропорции и заполняет всю доступную площадь */
+}
+@media (width <= 769px) {
+  .blog-section .blog__container .blog__content .mobile-swiper2 .swiper-wrapper .blog-slide .slide__title {
+    display: block;
+  }
+}
+@media (width <= 769px) {
+  .blog-section .blog__container .blog__content .mobile-swiper2 {
+    height: 450px;
+    width: 100%;
+  }
+  .blog-section .blog__container .blog__content .mobile-swiper2 .swiper-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+  .blog-section .blog__container .blog__content .mobile-swiper2 .swiper-wrapper .blog-slide .blog-img {
+    max-width: none;
+  }
+}
+.blog-section .blog__container .blog__content .sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #bae249;
+  padding: 16px;
+  max-width: 255px;
+}
+.blog-section .blog__container .blog__content .sidebar .title {
+  font-family: "Cormonant";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  color: #1d2f30;
+}
+.blog-section .blog__container .blog__content .sidebar .subtitle {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #506829;
+  flex-grow: 1;
+  margin-bottom: 75px;
+}
+.blog-section .blog__container .blog__content .sidebar .link {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 16px;
+  color: #0b1919;
+  transition: all 0.3s ease;
+}
+.blog-section .blog__container .blog__content .sidebar .link::after {
+  background: url("/src/icons/arrows/forCollection.svg") no-repeat center;
+}
+.blog-section .blog__container .blog__content .sidebar .link:focus {
+  outline-color: #bae249;
+  outline-offset: 4px;
+}
+.blog-section .blog__container .blog__content .sidebar .link:hover {
+  animation: fadeIn 0.3s ease forwards;
+  color: #688b05;
+}
+.blog-section .blog__container .blog__content .sidebar .link:hover::after {
+  animation: fadeIn 9s ease forwards;
+  background: url("/src/icons/arrows/forBlogHover.svg");
+}
+@media (width < 992px) {
+  .blog-section .blog__container .blog__content {
+    align-items: center;
+    flex-direction: column;
+  }
+  .blog-section .blog__container .blog__content .sidebar {
+    max-width: none;
+  }
+}
+
+.form-section {
+  position: relative;
+  padding: 60px 0;
+}
+.form-section .form-bg {
+  opacity: 0.2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/src/images/form/1_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: center;
+}
+.form-section .form__container .form__content {
+  max-width: 855px;
+  position: relative;
+}
+.form-section .form__container .form__content .title {
+  font-family: "Cormonant";
+  font-style: italic;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.form-section .form__container .form__content .subtitle {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.form-section .form__container .form__content .form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  gap: 24px;
+}
+.form-section .form__container .form__content .form .submit {
+  padding: 12px 26px;
+  font-weight: 700;
+  background: #bae249;
+  font-size: 16px;
+  color: #0b1919;
+  width: fit-content;
+  cursor: pointer;
+}
+.form-section .form__container .form__content .form .input {
+  padding: 11px 16px;
+  background: #fff;
+}
+.form-section .form__container .form__content .form .input:placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #899d9d;
+}
+
+.footer-section {
+  background-color: #0b1919;
+}
+.footer-section .container {
+  padding: 18px 0;
+  justify-content: center;
+}
+.footer-section .container .footer__links {
+  display: flex;
+  gap: 20px;
+}
+.footer-section .container .footer__links a {
+  width: 24px;
+  height: 24px;
+  display: block;
+  filter: grayscale(1);
+  opacity: 0.5;
+  background-size: cover;
+  transition: all 0.1s ease;
+}
+.footer-section .container .footer__links a:nth-child(1) {
+  background: url("/src/icons/socials/youtube.svg") no-repeat center;
+}
+.footer-section .container .footer__links a:nth-child(2) {
+  background: url("/src/icons/socials/insta.svg") no-repeat center;
+}
+.footer-section .container .footer__links a:nth-child(3) {
+  background: url("/src/icons/socials/facebook.svg") no-repeat center;
+}
+.footer-section .container .footer__links a:nth-child(4) {
+  background: url("/src/icons/socials/twitter.svg") no-repeat center;
+}
+.footer-section .container .footer__links a:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+.footer-section .container .footer__links a:focus {
+  filter: grayscale(0);
+  opacity: 1;
+  outline-color: #bae249;
+  outline-width: 0.5px;
+  outline-offset: 2px;
+}
+.footer-section .copyright {
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  background-color: #1d2f30;
+  opacity: 0.5;
+}
+.footer-section .copyright span {
+  font-weight: 400;
+  font-size: 12px;
+  color: #899d9d;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/src/fonts/openSans/OpenSans-Regular.woff"), url("/src/fonts/openSans/OpenSans-Regular.woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/src/fonts/openSans/OpenSans-Bold.woff"), url("/src/fonts/openSans/OpenSans-Bold.woff2");
+  font-weight: bold;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/src/fonts/openSans/OpenSans-SemiBold.woff"), url("/src/fonts/openSans/OpenSans-SemiBold.woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormonant";
+  src: url("/src/fonts/cormonant/Cormorant-Bold.woff"), url("/src/fonts/cormonant/Cormorant-Bold.woff2");
+  font-weight: bold;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormonant";
+  src: url("/src/fonts/cormonant/Cormorant-BoldItalic.woff"), url("/src/fonts/cormonant/Cormorant-BoldItalic.woff2");
+  font-weight: bold;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cormonant";
+  src: url("/src/fonts/cormonant/Cormorant-Regular.woff"), url("/src/fonts/cormonant/Cormorant-Regular.woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+.linkArrow {
+  width: fit-content;
+  position: relative;
+}
+.linkArrow::after {
+  content: "";
+  right: -68px;
+  position: absolute;
+  width: 54px;
+  height: 17px;
+  background: url("/src/icons/arrows/forReadMoreColored.svg");
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.8; /* Начальное значение - скрыто */
+  }
+  to {
+    opacity: 1; /* Конечное значение - показать */
+  }
+}
+/* 6 font styles
+
+Open Sans Regular
+72
+Open Sans Bold
+25
+Open Sans SemiBold
+2
+Cormorant Bold Italic
+7
+Cormorant Bold
+65
+Cormorant Regular
+1
+*/
