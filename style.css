@@ -63,35 +63,35 @@ button, input {
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("src/fonts/openSans/OpenSans-Bold.woff"), url("/src/fonts/openSans/OpenSans-Bold.woff2");
+  src: url("src/fonts/openSans/OpenSans-Bold.woff"), url("src/fonts/openSans/OpenSans-Bold.woff2");
   font-weight: bold;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("src/fonts/openSans/OpenSans-SemiBold.woff"), url("/src/fonts/openSans/OpenSans-SemiBold.woff2");
+  src: url("src/fonts/openSans/OpenSans-SemiBold.woff"), url("src/fonts/openSans/OpenSans-SemiBold.woff2");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "Cormonant";
-  src: url("src/fonts/cormonant/Cormorant-Bold.woff"), url("/src/fonts/cormonant/Cormorant-Bold.woff2");
+  src: url("src/fonts/cormonant/Cormorant-Bold.woff"), url("src/fonts/cormonant/Cormorant-Bold.woff2");
   font-weight: bold;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "Cormonant";
-  src: url("src/fonts/cormonant/Cormorant-BoldItalic.woff"), url("/src/fonts/cormonant/Cormorant-BoldItalic.woff2");
+  src: url("src/fonts/cormonant/Cormorant-BoldItalic.woff"), url("src/fonts/cormonant/Cormorant-BoldItalic.woff2");
   font-weight: bold;
   font-display: swap;
   font-style: italic;
 }
 @font-face {
   font-family: "Cormonant";
-  src: url("src/fonts/cormonant/Cormorant-Regular.woff"), url("/src/fonts/cormonant/Cormorant-Regular.woff2");
+  src: url("src/fonts/cormonant/Cormorant-Regular.woff"), url("src/fonts/cormonant/Cormorant-Regular.woff2");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -183,42 +183,42 @@ button, input {
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/src/fonts/openSans/OpenSans-Regular.woff"), url("/src/fonts/openSans/OpenSans-Regular.woff2");
+  src: url("src/fonts/openSans/OpenSans-Regular.woff"), url("src/fonts/openSans/OpenSans-Regular.woff2");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("/src/fonts/openSans/OpenSans-Bold.woff"), url("/src/fonts/openSans/OpenSans-Bold.woff2");
+  src: url("src/fonts/openSans/OpenSans-Bold.woff"), url("src/fonts/openSans/OpenSans-Bold.woff2");
   font-weight: bold;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("/src/fonts/openSans/OpenSans-SemiBold.woff"), url("/src/fonts/openSans/OpenSans-SemiBold.woff2");
+  src: url("src/fonts/openSans/OpenSans-SemiBold.woff"), url("src/fonts/openSans/OpenSans-SemiBold.woff2");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "Cormonant";
-  src: url("/src/fonts/cormonant/Cormorant-Bold.woff"), url("/src/fonts/cormonant/Cormorant-Bold.woff2");
+  src: url("src/fonts/cormonant/Cormorant-Bold.woff"), url("src/fonts/cormonant/Cormorant-Bold.woff2");
   font-weight: bold;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "Cormonant";
-  src: url("/src/fonts/cormonant/Cormorant-BoldItalic.woff"), url("/src/fonts/cormonant/Cormorant-BoldItalic.woff2");
+  src: url("src/fonts/cormonant/Cormorant-BoldItalic.woff"), url("src/fonts/cormonant/Cormorant-BoldItalic.woff2");
   font-weight: bold;
   font-display: swap;
   font-style: italic;
 }
 @font-face {
   font-family: "Cormonant";
-  src: url("/src/fonts/cormonant/Cormorant-Regular.woff"), url("/src/fonts/cormonant/Cormorant-Regular.woff2");
+  src: url("src/fonts/cormonant/Cormorant-Regular.woff"), url("src/fonts/cormonant/Cormorant-Regular.woff2");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -233,7 +233,7 @@ button, input {
   position: absolute;
   width: 54px;
   height: 17px;
-  background: url("/src/icons/arrows/forReadMoreColored.svg");
+  background: url("src/icons/arrows/forReadMoreColored.svg");
 }
 
 @keyframes fadeIn {
