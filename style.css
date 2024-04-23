@@ -607,6 +607,7 @@ body {
 }
 @media (width < 768px) {
   .swiper--custom .swiper-navigation .bullets {
+    margin: 0 auto !important;
     display: block;
   }
    .swiper--custom .swiper-navigation .fraction {
