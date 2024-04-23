@@ -609,6 +609,10 @@ body {
   .swiper--custom .swiper-navigation .bullets {
     display: block;
   }
+   .swiper--custom .swiper-navigation .fraction {
+    position: absolute;
+     left: -1000px;
+  }
 }
 .swiper--custom .swiper-navigation .prev-button--custom {
   left: 43%;
