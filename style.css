@@ -329,7 +329,7 @@ body {
 .header .container .aside-navigation .header__burger {
   cursor: pointer;
   display: none;
-  background: url("/src/icons/other/bars-solid.svg") no-repeat;
+  background: url("src/icons/other/bars-solid.svg") no-repeat;
 }
 @media (width < 768px) {
   .header .container .aside-navigation .header__burger {
