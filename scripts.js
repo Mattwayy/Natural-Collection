@@ -92,7 +92,7 @@ const newSlideHTML = `      <div class="swiper-slide swiper-slide--custom">
 </a></div>`;
 const newSlideHTML2 = `   
  <div class="blog-slide">
-<img src="/src/images/collection/flowers.png" alt="flowers-collection" class="blog-img">
+<img src="src/images/collection/flowers.png" alt="flowers-collection" class="blog-img">
 </div>`;
 
 //2# slide
