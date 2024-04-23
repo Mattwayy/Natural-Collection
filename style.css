@@ -607,8 +607,9 @@ body {
 }
 @media (width < 768px) {
   .swiper--custom .swiper-navigation .bullets {
-    margin: 0 auto !important;
-    display: block;
+    display: flex;
+    width: 100%;
+    justify-content: center;
   }
    .swiper--custom .swiper-navigation .fraction {
     position: absolute;
