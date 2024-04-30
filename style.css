@@ -997,6 +997,9 @@ body {
   z-index: 9999;
   animation: slideIn 0.6s ease;
 }
+#popup img {
+  margin-top: 50px;
+}
 
 @keyframes slideIn {
   0% {
@@ -1014,6 +1017,12 @@ body {
 .settings-window {
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  align-items: center;
+}
+
+.settings-window img {
+  width: 50vw;
 }
 
 .overlay {
@@ -1022,27 +1031,22 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.100); /* Semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
   z-index: 999; /* Ensure it's above other content */
 }
 
 #open-popup {
   border: none;
   color: white;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: none;
   font-size: 20px;
-  margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 12px;
-  border: 1px solid #3b3b3b;
 }
 @media (width < 769px) {
   #open-popup {
-    display: inline-block;
+    display: block;
   }
 }
 .close-button {
