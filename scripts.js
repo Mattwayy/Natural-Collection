@@ -130,7 +130,29 @@ mobileSlider();
 window.addEventListener('resize', () => {
     mobileSlider();
 });
-
+document.getElementById("open-popup").addEventListener("click", function() {
+    document.getElementById("popup").classList.toggle("hidden");
+    addOverlay(); // Call function to add overlay
+  });
+  
+  document.getElementById("close-popup").addEventListener("click", function() {
+    document.getElementById("popup").classList.add("hidden");
+    removeOverlay(); // Call function to remove overlay
+  });
+  
+  function addOverlay() {
+    // Create overlay element
+    const overlay = document.createElement("div");
+    overlay.classList.add("overlay"); // Add class for styling
+    document.body.appendChild(overlay); // Append overlay to the body
+  }
+  
+  function removeOverlay() {
+    const overlay = document.querySelector(".overlay");
+    if (overlay) {
+      overlay.parentNode.removeChild(overlay); // Remove overlay if exists
+    }
+  }
 
 
 
