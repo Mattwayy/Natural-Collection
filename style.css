@@ -1027,19 +1027,23 @@ body {
 }
 
 #open-popup {
-  background-color: #4e4e4e;
   border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: none;
   font-size: 20px;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 12px;
   border: 1px solid #3b3b3b;
+}
+@media (width < 769px) {
+  #open-popup {
+    display: inline-block;
+  }
 }
 .close-button {
   cursor: pointer;
