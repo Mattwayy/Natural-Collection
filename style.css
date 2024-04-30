@@ -1041,3 +1041,10 @@ body {
   border-radius: 12px;
   border: 1px solid #3b3b3b;
 }
+.close-button {
+  cursor: pointer;
+  color: #FFF;
+  font-size: 1.5em;
+  border: none;
+  background: none;
+}
